@@ -29,10 +29,7 @@ int main() {
     Individual * off1 = execute(ind1, bitflip, k1);
     Individual * off2 = execute(ind2, rearrange, k2);
 
-    int maxOnes1 = off1->getMaxOnes();
-    int maxOnes2 = off2->getMaxOnes();
-
     cout << off1->getString() << " ";
     cout << off2->getString() << " ";
-    cout << max(maxOnes1, maxOnes2) << endl;
+    cout << off2->getMaxOnes() << endl;
 }

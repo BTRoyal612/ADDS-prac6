@@ -19,17 +19,17 @@ std::string Individual::getString() {
 }
 
 int Individual::getBit(int pos) {
-    if (pos > length || pos <= 0) return -1;
-    return binaryString[pos-1] - '0';
+    if (pos >= length) return -1;
+    return binaryString[pos] - '0';
 }
 
 void Individual::flipBit(int pos) {
-    if (pos > length || pos <= 0) return;
+    if (pos >= length) return;
 
-    if (binaryString[pos-1] == '0') {
-        binaryString[pos-1] = '1';
+    if (binaryString[pos] == '0') {
+        binaryString[pos] = '1';
     } else { 
-        binaryString[pos-1] = '0';
+        binaryString[pos] = '0';
     }
 }
 
